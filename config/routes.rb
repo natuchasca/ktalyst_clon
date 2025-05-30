@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get "dashboard/home"
+  root to: 'dashboard#home'
+
+  get "dashboard/home", to: 'dashboard#home'
+  get "dashboard/events", to: 'dashboard#events'
+  get "dashboard/orders", to: 'dashboard#orders'
+  get "dashboard/settings", to: 'dashboard#settings'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
